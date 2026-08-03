@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +21,6 @@
         .page-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
         .page-container.active { opacity: 1; visibility: visible; transform: translateY(0); }
         .btn-luxury { position: relative; overflow: hidden; transition: all 0.4s ease; }
-        .floral-corner { position: absolute; width: 120px; opacity: 0.7; pointer-events: none; }
-        .floral-top-left { top: -10px; left: -10px; }
-        .floral-bottom-right { bottom: -10px; right: -10px; transform: rotate(180deg); }
     </style>
 </head>
 <body class="h-screen w-screen flex items-center justify-center font-sans-modern antialiased">
@@ -43,15 +39,15 @@
             </button>
         </div>
 
-        <!-- PAGE 2: الصورة المحلية -->
+        <!-- PAGE 2 -->
         <div id="page-2" class="page-container px-8 text-center">
             <p class="font-sans-modern text-xs tracking-[0.2em] text-gray-500 mb-3 uppercase">Together with their families</p>
             
             <div class="relative flex justify-center items-center mb-3 h-32">
                 <div class="absolute w-28 h-28 bg-gold/15 rounded-full blur-sm"></div>
                 <div class="absolute w-32 h-32 border border-gold/50 rounded-full"></div>
-                <!-- هنا الصورة بتنادى من ملفات المشروع مباشرة -->
-                <img src="couple.png" alt="Ahmad & Nour" class="relative z-10 w-28 h-28 object-cover rounded-full shadow-md border-2 border-white">
+                <!-- اسم صورتك محطوط هنا بالظبط -->
+                <img src="IMG-20260804-WA0003-removebg-preview.png" alt="Ahmad & Nour" class="relative z-10 w-28 h-28 object-cover rounded-full shadow-md border-2 border-white">
             </div>
 
             <h2 class="font-serif-elegant text-4xl text-gold leading-none mb-1">Ahmad</h2>
@@ -67,7 +63,7 @@
             </button>
         </div>
 
-        <!-- PAGE 3: الموعد 7:30 -->
+        <!-- PAGE 3 -->
         <div id="page-3" class="page-container px-8 text-center">
             <h3 class="font-serif-elegant text-4xl italic gold-gradient-text mb-10">When & Where</h3>
             <div class="flex items-center justify-center w-full mb-10">
@@ -112,3 +108,4 @@
     </script>
 </body>
 </html>
+
