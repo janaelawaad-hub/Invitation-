@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ahmad & Nour - Engagement Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- خطوط راقية جداً للاسم والتفاصيل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات الخطوط */
+        .font-serif-elegant { font-family: 'Cormorant Garamond', serif; }
+        .font-sans-modern { font-family: 'Montserrat', sans-serif; }
+
+        /* الألوان المخصصة */
+        :root {
+            --gold-primary: #C5A059;
+            --gold-light: #E8D5A5;
+            --off-white: #FAF9F6;
+            --text-dark: #333333;
+        }
+
+        /* خلفية رخامية ناعمة مع إضاءة دافئة */
+        body {
+            background-color: var(--off-white);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(200, 170, 100, 0.1) 0%, transparent 60%),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            color: var(--text-dark);
+            overflow: hidden; /* لمنع التمرير العشوائي، الانتقال سيكون بالأزرار */
+            touch-action: manipulation;
+        }
+
+        .text-gold { color: var(--gold-primary); }
+        .bg-gold { background-color: var(--gold-primary); }
+        .border-gold { border-color: var(--gold-primary); }
+        
+        .gold-gradient-text {
+            background: linear-gradient(to right, #BFA15F, #E8D5A5, #BFA15F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* تأثيرات الانتقال بين الصفحات */
+        .page-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .page-container.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* أزرار تفاعلية فخمة */
+        .btn-luxury {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn-luxury::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%) rotate(45deg) translateY(100%);
+            transition: all 0.6s ease;
+        }
+        .btn-luxury:hover::after, .btn-luxury:active::after {
+            transform: translate(-50%, -50%) rotate(45deg) translateY(-100%);
+        }
+
+        /* زينة الورود (SVG) */
+        .floral-corner {
+            position: absolute;
+            width: 120px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .floral-top-left { top: -10px; left: -10px; transform: rotate(0deg); }
+        .floral-bottom-right { bottom: -10px; right: -10px; transform: rotate(180deg); }
+    </style>
+</head>
+<body class="h-screen w-screen flex items-center justify-center font-sans-modern antialiased">
+
+    <!-- محاكي شاشة الموبايل ليظهر بشكل رائع حتى لو فُتح من الكمبيوتر -->
+    <div class="relative w-full h-full max-w-md mx-auto shadow-2xl bg-white/40 backdrop-blur-sm overflow-hidden" style="box-shadow: 0 0 40px rgba(197, 160, 89, 0.1);">
+        
+        <!-- زينة الورد العلوية -->
+        <svg class="floral-corner floral-top-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 10 C 30 10, 40 30, 30 50 C 20 70, 0 80, 0 100" stroke="#E8D5A5" stroke-width="1.5" fill="none"/>
+            <path d="M10 10 C 10 30, 30 40, 50 30 C 70 20, 80 0, 100 0" stroke="#E8D5A5" stroke-width="1.5" fill="none"/>
+            <circle cx="20" cy="20" r="3" fill="#ffffff" stroke="#C5A059" stroke-width="0.5"/>
+            <circle cx="40" cy="15" r="1.5" fill="#C5A059"/>
+            <circle cx="15" cy="40" r="1.5" fill="#C5A059"/>
+        </svg>
+
+        <!-- زينة الورد السفلية -->
+        <svg class="floral-corner floral-bottom-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 10 C 30 10, 40 30, 30 50 C 20 70, 0 80, 0 100" stroke="#E8D5A5" stroke-width="1.5" fill="none"/>
+            <path d="M10 10 C 10 30, 30 40, 50 30 C 70 20, 80 0, 100 0" stroke="#E8D5A5" stroke-width="1.5" fill="none"/>
+            <circle cx="20" cy="20" r="3" fill="#ffffff" stroke="#C5A059" stroke-width="0.5"/>
+            <circle cx="40" cy="15" r="1.5" fill="#C5A059"/>
+            <circle cx="15" cy="40" r="1.5" fill="#C5A059"/>
+        </svg>
+
+
+        <!-- ================= PAGE 1: الغلاف ================= -->
+        <div id="page-1" class="page-container active px-8 text-center">
+            <div class="mb-8">
+                <p class="font-sans-modern tracking-[0.3em] text-xs text-gray-500 uppercase mb-4">You are invited</p>
+                <h1 class="font-serif-elegant text-5xl italic gold-gradient-text mb-6">Engagement<br>Celebration</h1>
+                <div class="w-12 h-[1px] bg-gold mx-auto my-6"></div>
+            </div>
+            
+            <button onclick="goToPage(2)" class="btn-luxury mt-8 px-10 py-3 border border-gold text-gold font-sans-modern text-sm uppercase tracking-widest hover:bg-gold hover:text-white rounded-full bg-white/50 backdrop-blur-sm shadow-sm">
+                Open Invitation
+            </button>
+        </div>
+
+        <!-- ================= PAGE 2: أسماء العروسين والترحيب ================= -->
+        <div id="page-2" class="page-container px-8 text-center">
+            <p class="font-sans-modern text-xs tracking-[0.2em] text-gray-500 mb-6 uppercase">Together with their families</p>
+            
+            <h2 class="font-serif-elegant text-6xl text-gold leading-tight mb-2">Ahmad</h2>
+            <span class="font-serif-elegant text-4xl italic text-gray-400 my-2 block">&</span>
+            <h2 class="font-serif-elegant text-6xl text-gold leading-tight mt-2 mb-8">Nour</h2>
+            
+            <p class="font-serif-elegant text-lg text-gray-600 leading-relaxed mb-10 px-4">
+                Joyfully invite you to share in our happiness as we celebrate our engagement.
+            </p>
+
+            <button onclick="goToPage(3)" class="btn-luxury px-8 py-3 bg-gold text-white font-sans-modern text-xs uppercase tracking-widest rounded-full shadow-md">
+                View Details
+            </button>
+        </div>
+
+        <!-- ================= PAGE 3: تفاصيل الموعد ================= -->
+        <div id="page-3" class="page-container px-8 text-center">
+            <h3 class="font-serif-elegant text-4xl italic gold-gradient-text mb-10">When & Where</h3>
+            
+            <div class="flex items-center justify-center w-full mb-10">
+                <div class="text-right pr-6 border-r border-gold">
+                    <p class="font-sans-modern text-lg uppercase tracking-widest text-gray-700">Monday</p>
+                    <p class="font-serif-elegant text-sm text-gray-500 mt-1">Evening</p>
+                </div>
+                <div class="px-6 text-center">
+                    <p class="font-serif-elegant text-6xl text-gold">07</p>
+                </div>
+                <div class="text-left pl-6 border-l border-gold">
+                    <p class="font-sans-modern text-lg uppercase tracking-widest text-gray-700">September</p>
+                    <p class="font-serif-elegant text-sm text-gray-500 mt-1">2026</p>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <p class="font-sans-modern text-sm tracking-[0.2em] text-gray-600 uppercase">At</p>
+                <p class="font-serif-elegant text-3xl text-gold mt-2">8:00 PM</p>
+            </div>
+
+            <button onclick="goToPage(4)" class="btn-luxury px-8 py-3 border border-gold text-gold font-sans-modern text-xs uppercase tracking-widest hover:bg-gold hover:text-white rounded-full bg-white/50 backdrop-blur-sm">
+                Next
+            </button>
+        </div>
+
+        <!-- ================= PAGE 4: الموقع والـ QR ================= -->
+        <div id="page-4" class="page-container px-8 text-center">
+            <h3 class="font-serif-elegant text-4xl italic gold-gradient-text mb-6">Join Us</h3>
+            
+            <p class="font-serif-elegant text-lg text-gray-600 mb-8 px-4">
+                We look forward to celebrating this special day with you.
+            </p>
+
+            <!-- رابط جوجل ماب كزر -->
+            <a href="https://maps.app.goo.gl/iNuVxCxUfkGJJ9NeA" target="_blank" class="btn-luxury inline-block px-10 py-4 bg-gold text-white font-sans-modern text-sm uppercase tracking-[0.2em] rounded-full shadow-lg mb-8 w-full max-w-[280px]">
+                <span class="mr-2">📍</span> Location
+            </a>
+
+            <!-- مساحة الـ QR Code (تم استخدام API لإنشاء الكود للرابط المطلوب تلقائياً) -->
+            <div class="mt-4 flex flex-col items-center">
+                <p class="font-sans-modern text-[10px] tracking-widest text-gray-400 uppercase mb-3">Scan for Directions</p>
+                <div class="p-3 bg-white border border-gold/30 rounded-xl shadow-sm">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://maps.app.goo.gl/iNuVxCxUfkGJJ9NeA&color=C5A059" alt="Location QR Code" class="w-[100px] h-[100px]">
+                </div>
+            </div>
+
+            <!-- زر للرجوع للبداية (اختياري لجمال الاستخدام) -->
+            <button onclick="goToPage(1)" class="mt-10 font-sans-modern text-xs text-gray-400 uppercase tracking-widest underline decoration-gray-300 underline-offset-4 hover:text-gold">
+                Back to Start
+            </button>
+        </div>
+
+    </div>
+
+    <!-- كود الجافاسكريبت للتحكم في التنقل بين الصفحات -->
+    <script>
+        function goToPage(pageNumber) {
+            // إخفاء كل الصفحات
+            const pages = document.querySelectorAll('.page-container');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            const targetPage = document.getElementById('page-' + pageNumber);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+
