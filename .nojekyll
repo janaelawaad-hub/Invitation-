@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ahmed & Nour - Engagement Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-serif-elegant { font-family: 'Cormorant Garamond', serif; }
+        .font-sans-modern { font-family: 'Montserrat', sans-serif; }
+        :root { --gold-primary: #C5A059; --off-white: #FAF9F6; --text-dark: #333333; }
+        body { background-color: var(--off-white); color: var(--text-dark); overflow: hidden; touch-action: manipulation; }
+        .text-gold { color: var(--gold-primary); }
+        .bg-gold { background-color: var(--gold-primary); }
+        .border-gold { border-color: var(--gold-primary); }
+        .gold-gradient-text { background: linear-gradient(to right, #BFA15F, #E8D5A5, #BFA15F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .page-container.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .btn-luxury { position: relative; overflow: hidden; transition: all 0.4s ease; }
+    </style>
+</head>
+<body class="h-screen w-screen flex items-center justify-center font-sans-modern antialiased">
+
+    <div class="relative w-full h-full max-w-md mx-auto shadow-2xl bg-white/40 backdrop-blur-sm overflow-hidden" style="box-shadow: 0 0 40px rgba(197, 160, 89, 0.1);">
+        
+        <!-- PAGE 1 -->
+        <div id="page-1" class="page-container active px-8 text-center">
+            <div class="mb-8">
+                <p class="font-sans-modern tracking-[0.3em] text-xs text-gray-500 uppercase mb-4">You are invited</p>
+                <h1 class="font-serif-elegant text-5xl italic gold-gradient-text mb-6">Engagement<br>Celebration</h1>
+                <div class="w-12 h-[1px] bg-gold mx-auto my-6"></div>
+            </div>
+            <button onclick="goToPage(2)" class="btn-luxury mt-8 px-10 py-3 border border-gold text-gold font-sans-modern text-sm uppercase tracking-widest hover:bg-gold hover:text-white rounded-full bg-white/50">
+                Open Invitation
+            </button>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div id="page-2" class="page-container px-8 text-center">
+            <p class="font-sans-modern text-xs tracking-[0.2em] text-gray-500 mb-3 uppercase">Together with their families</p>
+            
+            <div class="relative flex justify-center items-center mb-3 h-32">
+                <div class="absolute w-28 h-28 bg-gold/15 rounded-full blur-sm"></div>
+                <div class="absolute w-32 h-32 border border-gold/50 rounded-full"></div>
+                <img src="IMG-20260804-WA0003-removebg-preview.png" alt="Ahmed & Nour" class="relative z-10 w-28 h-28 object-cover rounded-full shadow-md border-2 border-white">
+            </div>
+
+            <h2 class="font-serif-elegant text-4xl text-gold leading-none mb-1">Ahmed</h2>
+            <span class="font-serif-elegant text-2xl italic text-gray-400 my-1 block">&</span>
+            <h2 class="font-serif-elegant text-4xl text-gold leading-none mt-1 mb-4">Nour</h2>
+            
+            <p class="font-serif-elegant text-sm text-gray-600 leading-relaxed mb-6 px-4">
+                Joyfully invite you to share in our happiness as we celebrate our engagement.
+            </p>
+
+            <button onclick="goToPage(3)" class="btn-luxury px-8 py-3 bg-gold text-white font-sans-modern text-xs uppercase tracking-widest rounded-full shadow-md">
+                View Details
+            </button>
+        </div>
+
+        <!-- PAGE 3 -->
+        <div id="page-3" class="page-container px-8 text-center">
+            <h3 class="font-serif-elegant text-4xl italic gold-gradient-text mb-10">When & Where</h3>
+            <div class="flex items-center justify-center w-full mb-10">
+                <div class="text-right pr-6 border-r border-gold">
+                    <p class="font-sans-modern text-lg uppercase tracking-widest text-gray-700">Monday</p>
+                    <p class="font-serif-elegant text-sm text-gray-500 mt-1">Evening</p>
+                </div>
+                <div class="px-6 text-center"><p class="font-serif-elegant text-6xl text-gold">07</p></div>
+                <div class="text-left pl-6 border-l border-gold">
+                    <p class="font-sans-modern text-lg uppercase tracking-widest text-gray-700">September</p>
+                    <p class="font-serif-elegant text-sm text-gray-500 mt-1">2026</p>
+                </div>
+            </div>
+            <div class="mb-12">
+                <p class="font-sans-modern text-sm tracking-[0.2em] text-gray-600 uppercase">At</p>
+                <p class="font-serif-elegant text-3xl text-gold mt-2">7:30 PM</p>
+            </div>
+            <button onclick="goToPage(4)" class="btn-luxury px-8 py-3 border border-gold text-gold font-sans-modern text-xs uppercase tracking-widest hover:bg-gold hover:text-white rounded-full">
+                Next
+            </button>
+        </div>
+
+        <!-- PAGE 4 -->
+        <div id="page-4" class="page-container px-8 text-center">
+            <h3 class="font-serif-elegant text-4xl italic gold-gradient-text mb-6">Join Us</h3>
+            <p class="font-serif-elegant text-lg text-gray-600 mb-8 px-4">We look forward to celebrating this special day with you.</p>
+            <a href="https://maps.app.goo.gl/iNuVxVxUfkGJJ9NeA" target="_blank" class="btn-luxury inline-block px-10 py-4 bg-gold text-white font-sans-modern text-sm uppercase tracking-[0.2em] rounded-full shadow-lg mb-8 w-full max-w-[280px]">
+                <span class="mr-2">📍</span> Location
+            </a>
+            <button onclick="goToPage(1)" class="mt-4 font-sans-modern text-xs text-gray-400 uppercase tracking-widest underline">
+                Back to Start
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        function goToPage(pageNumber) {
+            document.querySelectorAll('.page-container').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + pageNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>
